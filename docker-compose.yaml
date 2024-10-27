@@ -1,0 +1,16 @@
+services:
+  weather-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/weather-app
+    ports:
+      - "5173:5173"
+    tty: true
+    command: >
+      /bin/bash -c '
+      cd weather-app/ &&
+      npm ci --cache /tmp/empty-cache &&
+      npm run dev
+      '
