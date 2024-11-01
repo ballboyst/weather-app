@@ -8,7 +8,7 @@ type ResultsProps = {
     }
 }
 
-const Result = (props: ResultsProps) => {
+const Results = (props: ResultsProps) => {
     return(
         <>
             {props.results.country &&
@@ -26,4 +26,4 @@ const Result = (props: ResultsProps) => {
     )
 }
 
-export default Result
+export default Results
